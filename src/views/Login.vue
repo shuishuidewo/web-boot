@@ -16,7 +16,7 @@
 			</el-form-item>
 			<el-checkbox v-model="checked" class="LoginRemember">记住我</el-checkbox>
 			<el-button type="primary" style="width: 100%;" @click="submitLogin">登录</el-button>
-			<el-button size="mini" round class="register" @click="handleButton">注册</el-button>
+			<el-button size="mini" round @click="handleButton">注册</el-button>
 		</el-form>
 	</div>
 </template>
@@ -99,6 +99,7 @@ export default {
 	background: #fff;
 	border: 1px solid #eaeaea;
 	box-shadow: 0 0 25px #cac6ca;
+
 }
 
 .LoginTitle {
@@ -111,9 +112,10 @@ export default {
 	margin: 0 0 15px 0;
 }
 
-.register {
-	margin: 15px 0 0 0;
+.el-button+.el-button,
+.el-checkbox.is-bordered+.el-checkbox.is-bordered {
 	width: 100%;
+	margin: 15px 0px 0px 0px;
 }
 
 .el-form-item__content {
